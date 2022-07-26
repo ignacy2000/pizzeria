@@ -1,0 +1,134 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;/*aby wszystko dziedziczyło wartość box-sizing*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+    background-color: aqua;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-fixed {
+    margin-top: 60px;
+}
+
+.navbar .logo {
+    height: 60px;
+    width: 20%;
+    margin-right: 15%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.navbar .nav-links {
+    height: 60px;
+    width: 65%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navbar .nav-links .services {
+    position: relative;
+}
+
+.navbar .nav-links .services .dropdown {
+    width: 200px;
+    background-color: aqua;
+    border-radius: 15px;
+    left: -60%;
+    position: absolute;
+    display: none;
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.navbar .nav-links .services .dropdown li:last-child {
+    margin-bottom: 1px;
+}
+
+.navbar .nav-links .services:hover .dropdown {
+    display: block;
+}
+
+.navbar .nav-links li {
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.navbar .nav-links li:hover {
+    background-color: wheat;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.navbar .nav-links li a{
+    text-decoration: none;
+}
+
+.abaut-me {
+    display: flex;
+}
+
+.abaut-me div {
+    width: 50%;
+    height: 500px;
+    padding: 50px;
+}
+
+.abaut-me .my-img {
+    border: 2px solid black;
+    text-align: center;
+}
+
+.abaut-me .my-description {
+    border: 2px solid black;
+    border-left: 0;
+    text-align: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.abaut-me .my-description::-webkit-scrollbar {
+    width: 12px;
+}
+
+.abaut-me .my-description::-webkit-scrollbar-track {
+    background-color: lightgrey;
+}
+
+.abaut-me .my-description::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border: 3px solid lightgrey;
+    border-radius: 20px;
+}
+
+.abaut-me .my-img img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+}
